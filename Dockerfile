@@ -11,7 +11,7 @@ RUN apt update && \
     && rm -rf /var/lib/apt/lists/*
 
 
-RUN pip3 install --yes \
+RUN pip3 install \
         pyshark \
-        scapy
+        scapy \
         dig
