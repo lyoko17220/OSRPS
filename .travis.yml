@@ -1,0 +1,16 @@
+sudo: enabled
+
+services:
+- docker
+
+cache:
+  bundler: true
+
+script:
+- docker build -t lyoko17220/osrps-standalone .
+
+after_success:
+- if [ "$TRAVIS_BRANCH" == "master" ]; then
+  docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+  docker push lyoko17220/osrps-standalone;
+  fi
