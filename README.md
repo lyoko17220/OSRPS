@@ -15,3 +15,10 @@ Pré-requis:
  - Nslookup
  - Nmap
  - Awk
+
+## Usage
+*Via PyCharm*
+
+- Ajouter un interpreteur
+- Docker > lyoko17220/osrps-standalone
+- Changer l'éxécutable `python` en `python3`
