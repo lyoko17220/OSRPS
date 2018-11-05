@@ -9,6 +9,7 @@ RUN apt update && \
         nmap \
         gawk \
 	    apg \
+        net-tools \
     && rm -rf /var/lib/apt/lists/*
 
 
