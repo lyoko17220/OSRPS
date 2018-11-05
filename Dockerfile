@@ -8,6 +8,7 @@ RUN apt update && \
         dnsutils \
         nmap \
         gawk \
+	    apg \
     && rm -rf /var/lib/apt/lists/*
 
 
