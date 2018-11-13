@@ -10,10 +10,18 @@ RUN apt update && \
         gawk \
 	    apg \
         net-tools \
+        lynx \
+        apache2 \
     && rm -rf /var/lib/apt/lists/*
-
 
 RUN pip3 install \
         pyshark \
         scapy \
         dig
+
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x entrypoint.sh
+
+WORKDIR /
+
+ENTRYPOINT ["./entrypoint.sh","/bin/bash"]
